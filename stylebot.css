@@ -1,3 +1,7 @@
+body {
+  width: calc(100% + 1px);
+}
+
 .forabg,
 .forumbg {
   background-color: #14274E;
@@ -32,6 +36,10 @@
 .list-inner a {
   text-transform: capitalize;
   font-weight: bold;
+}
+
+.header dd.lastpost {
+  text-align: center;
 }
 
 .topiclist li.row:not(:last-of-type) {
@@ -325,6 +333,12 @@ i.icon.fa-clone::before {
   padding: .5rem 0;
 }
 
+.post div[id*="post_content"] .author a,
+.post div[id*="post_content"] .author span,
+.post div[id*="post_content"] .author br {
+  display: none;
+}
+
 .post div[id*="post_content"] > *:not(.signature) {
   padding-left: 1rem;
   padding-right: 1rem;
@@ -355,6 +369,79 @@ i.icon.fa-clone::before {
   border-left: 1px solid #03506f;
 }
 
+/* POST BUTTONS */
+.post-buttons {
+  margin-top: .5rem;
+}
+
+.post-buttons li {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.post-buttons a {
+  height: 36px;
+  width: 36px;
+  background: none;
+  border: none;
+  box-shadow: none;
+  box-sizing: content-box;
+  padding: 2px;
+  margin-right: .5rem;
+}
+
+.post-buttons i.icon.fa-pencil::before,
+.post-buttons i.icon.fa-exclamation::before,
+.post-buttons i.icon.fa-quote-left::before,
+.post-buttons i.icon.fa-thumbs-o-up::before,
+.post-buttons i.icon.fa-times::before {
+  content: '';
+}
+
+.post-buttons i.icon.fa-pencil {
+  background: url(https://img.icons8.com/clouds/100/000000/edit.png);
+}
+
+.post-buttons i.icon.fa-exclamation {
+  background: url(https://img.icons8.com/clouds/100/000000/error.png);
+}
+
+.post-buttons i.icon.fa-quote-left {
+  background: url(https://img.icons8.com/clouds/100/000000/quote-left.png);
+}
+
+.post-buttons i.icon.fa-thumbs-o-up {
+  background: url(https://img.icons8.com/clouds/100/000000/thumb-up.png);
+}
+
+.post-buttons i.icon.fa-times {
+  background: url(https://img.icons8.com/clouds/100/000000/trash.png);
+}
+
+.post-buttons i.icon.fa-pencil,
+.post-buttons i.icon.fa-exclamation,
+.post-buttons i.icon.fa-quote-left,
+.post-buttons i.icon.fa-thumbs-o-up,
+.post-buttons i.icon.fa-times {
+  background-size: 120% 120%;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+.post-buttons a:hover {
+  padding: 0;
+  width: 40px;
+  height: 40px;
+}
+
+.post-buttons li b {
+  position: relative;
+  bottom: -.75rem;
+}
+
 /* AVATAR */
 .avatar-container a {
   width: 100%;
@@ -381,5 +468,190 @@ i.icon.fa-chevron-circle-up {
 }
 
 i.icon.fa-chevron-circle-up::before {
+  content: '';
+}
+
+/* NAVBAR */
+#menubar1 {
+  margin-top: -1px;
+  margin-left: -1px;
+}
+
+#top_menu {
+  height: 3.5rem;
+}
+
+#top_menu ul,
+#top_menu li,
+#top_menu a,
+#top_menu b {
+  background: none;
+  font-size: 1rem;
+}
+
+#top_menu ul {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-around;
+  background-color: #14274e;
+  padding: 0 3rem;
+  height: 100%;
+}
+
+#top_menu li {
+  flex-grow: 1;
+}
+
+#top_menu a {
+  color: #f1f6f9;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  padding: 0;
+  width: 100%;
+  align-items: center;
+  box-sizing: border-box;
+  border-bottom: 2px solid transparent;
+}
+
+#top_menu a:hover {
+  border-bottom-color: white;
+}
+
+#top_menu b {
+  float: none;
+  padding: 0;
+}
+
+#top_menu em.home {
+  background: url(https://img.icons8.com/clouds/100/000000/home.png);
+}
+
+#top_menu em.profile {
+  background: url(https://img.icons8.com/clouds/100/000000/settings.png);
+}
+
+#top_menu em.pm {
+  background: url(https://img.icons8.com/clouds/100/000000/mailbox-closed-flag-up.png);
+}
+
+#top_menu em.search {
+  background: url(https://img.icons8.com/clouds/100/000000/search.png);
+}
+
+#top_menu em.faq {
+  background: url(https://img.icons8.com/clouds/100/000000/info.png);
+}
+
+#top_menu em.members {
+  background: url(https://img.icons8.com/clouds/100/000000/compare-heights.png);
+}
+
+#top_menu em.thankslist {
+  background: url(https://img.icons8.com/clouds/100/000000/medal.png);
+}
+
+#top_menu em.login {
+  background: url(https://img.icons8.com/clouds/100/000000/export.png);
+}
+
+#top_menu em.home,
+#top_menu em.profile,
+#top_menu em.pm,
+#top_menu em.search,
+#top_menu em.faq,
+#top_menu em.members,
+#top_menu em.thankslist,
+#top_menu em.login {
+  background-repeat: no-repeat;
+  background-size: contain;
+  height: 40px;
+  width: 40px;
+  margin-right: .5rem;
+}
+
+/* PAGE HEADER */
+#page-header {
+  background: url(https://i.ibb.co/3Td4RrT/banner-Background-Image-aihn8x8fvng51.jpg) no-repeat;
+  background-size: 100% 100%;
+  margin-left: -1px;
+  width: calc(100% + 1px);
+  position: relative;
+}
+
+#page-header::before {
+  content: 'Forum Board Games';
+  font-size: 4rem;
+  position: absolute;
+  padding: 0 1rem;
+  letter-spacing: 3px;
+  color: #E1EEFF;
+  font-weight: bold;
+  bottom: 5.5rem;
+  background-color: #14274e;
+  box-shadow: 5px 5px 0px 0px #289FED, 10px 10px 0px 0px #5FB8FF, 15px 15px 0px 0px #A1D8FF, 20px 20px 0px 0px #CAE6FF, 25px 25px 0px 0px #E1EEFF, 5px 5px 0px 8px rgba(0,0,0,0);;
+}
+
+#page-header .headerbar {
+  position: relative;
+}
+
+#search-box {
+  box-shadow: 0px 0px 15px 5px rgba(255,255,255,0.53);
+  display: inline-block;
+  margin: 0;
+  position: absolute;
+  bottom: 2px;
+  right: 5px;
+  border: 1px solid #14274e;
+  border-radius: 0;
+}
+
+#keywords {
+  height: 2.5rem;
+  border-radius: 0;
+  padding: .5rem;
+  width: 14rem;
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+#search .button-search,
+#search .button-search-end {
+  height: 2.5rem;
+  width: 2.5rem;
+  box-sizing: border-box;
+  background-color: #14274e;
+  background-image: none;
+  border: none;
+  border-radius: 0;
+  padding: 0;
+  box-shadow: none;
+}
+
+#search .button-search:hover,
+#search .button-search-end:hover {
+  background-color: #c6ebc9;
+}
+
+#search .button-search i.icon.fa-search {
+  background: url(https://img.icons8.com/plasticine/100/000000/search.png) no-repeat;
+
+}
+
+#search .button-search-end i.icon.fa-cog {
+  background: url(https://img.icons8.com/plasticine/100/000000/settings.png) no-repeat;
+}
+
+#search .button-search i.icon.fa-search,
+#search .button-search-end i.icon.fa-cog {
+  background-size: cover;
+  height: 2.5rem;
+  width: 2.5rem;
+}
+
+#search .button-search i.icon.fa-search::before,
+#search .button-search-end i.icon.fa-cog::before {
   content: '';
 }
