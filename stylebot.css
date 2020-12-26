@@ -394,7 +394,8 @@ i.icon.fa-clone::before {
 .post-buttons i.icon.fa-exclamation::before,
 .post-buttons i.icon.fa-quote-left::before,
 .post-buttons i.icon.fa-thumbs-o-up::before,
-.post-buttons i.icon.fa-times::before {
+.post-buttons i.icon.fa-times::before,
+.post-buttons i.icon.fa-recycle::before {
   content: '';
 }
 
@@ -418,11 +419,16 @@ i.icon.fa-clone::before {
   background: url(https://img.icons8.com/clouds/100/000000/trash.png);
 }
 
+.post-buttons i.icon.fa-recycle {
+  background: url(https://img.icons8.com/clouds/100/000000/recycle-sign.png);
+}
+
 .post-buttons i.icon.fa-pencil,
 .post-buttons i.icon.fa-exclamation,
 .post-buttons i.icon.fa-quote-left,
 .post-buttons i.icon.fa-thumbs-o-up,
-.post-buttons i.icon.fa-times {
+.post-buttons i.icon.fa-times,
+.post-buttons i.icon.fa-recycle {
   background-size: 120% 120%;
   background-position: center;
   background-repeat: no-repeat;
