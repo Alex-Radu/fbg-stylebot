@@ -83,6 +83,7 @@ body {
   display: flex;
   align-items: center;
   margin: 0;
+  padding-right: .5rem;
 }
 
 .forums .row-item dd.topics {
@@ -111,6 +112,7 @@ body {
   text-align: center;
   vertical-align: middle;
   line-height: 48px;
+  flex-shrink: 0;
 }
 
 .forums .row-item dd.lastpost,
@@ -137,7 +139,7 @@ body {
 }
 
 .forum_unread,
-.forum_unread_subform,
+.forum_unread_subforum,
 .topic_unread,
 .topic_unread_hot {
   background-image: url(
@@ -217,34 +219,37 @@ i.icon.fa-file-o::before {
 }
 
 /* SECTION ICON */
+.forabg .header .list-inner a {
+  padding-left: 2.3rem;
+  position: relative;
+}
+
 .forabg .header .list-inner a::before {
   background-size: contain;
   content: ' ';
   display: inline-block;
-  width: 25px;
-  height: 25px;
-  margin-right: 3px;
+  width: 2rem;
+  height: 2rem;
   vertical-align: -30%;
-  position: relative;
-  top: -2px;
+  position: absolute;
+  top: -5px;
+  left: 0;
 }
 
 .forabg:nth-of-type(1) .header .list-inner a::before {
-  background-image: url(https://img.icons8.com/cotton/64/000000/speech-bubble-with-dots.png);
-  position: relative;
-  top: 0;
+  background-image: url(https://img.icons8.com/clouds/100/000000/speech-bubble-with-dots.png);
 }
 
 .forabg:nth-of-type(2) .header .list-inner a::before {
-  background-image: url(https://img.icons8.com/office/48/000000/pawn.png);
+  background-image: url(https://img.icons8.com/clouds/100/000000/dice.png);
 }
 
 .forabg:nth-of-type(3) .header .list-inner a::before {
-  background-image: url(https://img.icons8.com/dusk/64/000000/collectibles.png);
+  background-image: url(https://img.icons8.com/clouds/100/000000/folded-booklet.png);
 }
 
 .forabg:nth-of-type(4) .header .list-inner a::before {
-  background-image: url(https://img.icons8.com/color/48/000000/economic-improvement.png);
+  background-image: url(https://img.icons8.com/clouds/100/000000/economic-improvement--v2.png);
 }
 
 /* PAGINATION */
@@ -586,10 +591,30 @@ i.icon.fa-chevron-circle-up::before {
   position: relative;
 }
 
-#page-header::before {
+#site-description {
+  float: none;
+  margin: 0;
+  position: relative;
+  height: 10rem;
+  padding: 0;
+}
+
+#logo {
+  float: none;
+  padding: 0;
+  width: auto;
+  position: absolute;
+  bottom: 21px;
+  left: -4px;
+}
+
+#logo span {
+  display: none;
+}
+
+#logo::before {
   content: 'Forum Board Games';
   font-size: 4rem;
-  position: absolute;
   padding: 0 1rem;
   letter-spacing: 3px;
   color: #E1EEFF;
@@ -660,4 +685,332 @@ i.icon.fa-chevron-circle-up::before {
 #search .button-search i.icon.fa-search::before,
 #search .button-search-end i.icon.fa-cog::before {
   content: '';
+}
+
+/* NAV-MAIN */
+.navbar {
+ padding: 0;
+}
+
+#nav-main {
+  background-color: #14274e;
+  height: 2rem;
+  box-sizing: border-box;
+  padding: 0;
+}
+
+#quick-links {
+  display: none;
+}
+
+#nav-main li a {
+  color: #f1f6f9;
+  font-weight: bold;
+  font-size: 1rem;
+  line-height: 2rem;
+  height: 2rem;
+  text-decoration: none;
+}
+
+#nav-main li a:hover {
+  color: #c6ebc9;
+}
+
+/* Already a FAQ link in top NAV */
+
+#nav-main > li:nth-of-type(2) a {
+  /* margin-left: 1rem; */
+  /* box-sizing: border-box; */
+  display: none;
+}
+
+/* #nav-main li:nth-of-type(2) a .fa-question-circle::before {
+  content: '';
+}
+
+#nav-main li:nth-of-type(2) a .fa-question-circle {
+  background: url(https://img.icons8.com/clouds/100/000000/question-mark.png);
+  background-size: cover;
+  height: 2rem;
+  width: 2rem;
+  position: relative;
+  top: -10px;
+  margin-right: .25rem;
+} */
+
+#username_logged_in .avatar {
+  max-height: 2rem;
+  height: 2rem;
+  width: 2rem;
+  position: relative;
+  top: -2px;
+}
+
+#username_logged_in .username::after {
+  position: relative;
+  top: 5px;
+  margin-right: .5rem;
+}
+
+/* DROPDOWN */
+.dropdown {
+  border-radius: 0;
+}
+
+.dropdown .pointer .pointer-inner {
+  border-color: #f1f6f9 transparent;
+}
+
+.dropdown-contents {
+  border-radius: 0;
+  background-color: #f1f6f9;
+  padding: 0;
+}
+
+.dropdown-contents .separator {
+  display: none;
+}
+
+.dropdown-contents li:not(:first-of-type) {
+  border-top: 1px solid rgb(219, 226, 241);
+}
+
+.dropdown-contents li:hover {
+  background-color: #c6ebc9;
+}
+
+.dropdown-contents a * {
+  color: #14274e;
+}
+
+.dropdown-contents i.fa-sliders::before,
+.dropdown-contents i.fa-user::before,
+.dropdown-contents i.fa-power-off::before {
+  content: '';
+}
+
+.dropdown-contents i.fa-sliders {
+  background: url(https://img.icons8.com/clouds/100/000000/settings.png)
+}
+
+.dropdown-contents i.fa-user {
+  background: url(https://img.icons8.com/clouds/100/000000/test-account.png);
+}
+
+.dropdown-contents i.fa-power-off {
+  background: url(https://img.icons8.com/clouds/100/000000/export.png);
+}
+
+.dropdown-contents i.fa-sliders,
+.dropdown-contents i.fa-user,
+.dropdown-contents i.fa-power-off {
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 40px;
+  width: 40px;
+  margin-right: .5rem;
+  position: relative;
+  top: -14px;
+}
+
+/* NOTIFICATIONS */
+#notification_list_button {
+  position: relative;
+}
+
+#notification_list_button i {
+  background: url(https://img.icons8.com/clouds/100/000000/appointment-reminders--v1.png) no-repeat;
+  background-size: cover;
+  height: 2rem;
+  width: 2rem;
+  position: relative;
+  top: -10px;
+  margin-right: .4rem;
+}
+
+#notification_list_button i::before {
+  content: '';
+}
+
+#notification_list_button .badge {
+  position: absolute;
+  left: 15px;
+  top: -3px;
+  opacity: 1;
+}
+
+#notification_list {
+  margin-top: .5rem
+}
+
+#notification_list .pointer .pointer-inner {
+  border-color: #14274e transparent;
+}
+
+#notification_list .header {
+  background-color: #14274e;
+  background-image: none;
+  border-radius: 0;
+  line-height: 2rem;
+  height: 2rem;
+  color: #f1f6f9;
+  font-weight: bold;
+  text-transform: capitalize;
+  text-shadow: none;
+  padding-bottom: .25rem;
+}
+
+#notification_list .header span a {
+  position: relative;
+}
+
+#notification_list .header span a::before {
+  content: ' ';
+  background: url(https://img.icons8.com/clouds/100/000000/settings.png);
+  display: inline-block;
+  background-size: cover;
+  width: 2rem;
+  height: 2rem;
+  position: absolute;
+  left: -2rem;
+}
+
+#notification_list .header::after {
+  content: '';
+  display: none;
+}
+
+#notification_list .notification-block {
+  display: flex;
+  flex-direction: row;
+  padding: 0;
+  flex: 1;
+  height: auto;
+}
+
+#notification_list .notification-block img {
+  align-self: center;
+  margin: 0 .5rem;
+  border-radius: 50%;
+  box-sizing: border-box;
+}
+
+#notification_list .notification-block .notification_text {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  width: calc(100% - 66px);
+  flex-wrap: nowrap;
+}
+
+#notification_list .notification-block .notification_text p {
+  white-space: normal;
+}
+
+#notification_list .notification-block .notification_text .notification-reference {
+  flex-grow: 1;
+}
+
+#notification_list .notification-block .notification_text {
+  box-sizing: border-box;
+  margin-left: 0;
+}
+
+#notification_list .notification-block .notification-title {
+  padding-top: .5rem;
+  font-size: .75rem;
+}
+
+#notification_list .notification-block .notification-time {
+  font-size: .6rem;
+  margin-right: .5rem;
+  margin-bottom: .5rem;
+}
+
+#notification_list .footer a {
+  padding: 0;
+}
+
+#notification_list .footer a:hover {
+  background-color: #c6ebc9; 
+}
+
+/* PRIVATE MESSAGES MENU ITEM */
+#username_logged_in + li a {
+  position: relative;
+}
+
+#username_logged_in + li a i {
+  background: url(https://img.icons8.com/clouds/100/000000/open-envelope.png) no-repeat;
+  background-size: cover;
+  width: 2rem;
+  height: 2rem;
+  position: relative;
+  top: -10px;
+  margin-right: .4rem;
+}
+
+#username_logged_in + li a .badge {
+  position: absolute;
+  left: 15px;
+  top: -3px;
+  opacity: 1;
+}
+
+#username_logged_in + li a i::before {
+  content: '';
+}
+
+/* BREADCRUMBS */
+#page-header .navbar .inner {
+  position: relative;
+}
+
+#nav-breadcrumbs {
+  box-sizing: border-box;
+  position: absolute;
+  top: 0;
+  border: none;
+  height: 2rem;
+  padding: 0;
+}
+
+#nav-breadcrumbs li {
+  float: none;
+  display: inline-block;
+}
+
+#nav-breadcrumbs .breadcrumbs {
+  margin-left: .5rem;
+  height: 100%;
+  line-height: 2rem;
+  float: none;
+  max-width: none;
+}
+
+#nav-breadcrumbs .crumb a {
+  color: #f1f6f9;
+  text-decoration: none;
+}
+
+#nav-breadcrumbs .crumb a:hover {
+  color: #c6ebc9;
+}
+
+#nav-breadcrumbs i.fa-home {
+  background: url(https://img.icons8.com/clouds/100/000000/home.png) no-repeat;
+  background-size: cover;
+  height: 2rem;
+  width: 2rem;
+  position: relative;
+  top: -8px;
+  margin-right: .25rem;
+}
+
+#nav-breadcrumbs i.fa-home::before {
+  content: '';
+}
+
+#nav-breadcrumbs li.rightside {
+  display: none;
 }
